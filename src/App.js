@@ -22,10 +22,13 @@ import {
   ColourMappingChart,
   Editor,
 } from "./pages";
+import { useStateContext } from "./contexts/ContextProvider";
+
 import "./App.css";
 
 const App = () => {
-  const activeMenu = false;
+  const { activeMenu } = useStateContext();
+
   return (
     <div>
       <BrowserRouter>
@@ -62,29 +65,29 @@ const App = () => {
           <div>
             <Routes>
               {/* Dashboard */}
-              <Route path="/" element={<Ecommerce/>} />
-              <Route path="/ecommerce" element={<Ecommerce/>} />
+              <Route path="/" element={<Ecommerce />} />
+              <Route path="/ecommerce" element={<Ecommerce />} />
 
               {/* Pages */}
-              <Route path="/orders" element={<Orders/>} />
-              <Route path="/employees" element={<Employees/>} />
-              <Route path="/customers" element={<Customers/>} />
+              <Route path="/orders" element={<Orders />} />
+              <Route path="/employees" element={<Employees />} />
+              <Route path="/customers" element={<Customers />} />
 
               {/* Apps */}
-              <Route path="/kanban" element={<Kanban/>} />
-              <Route path="/editor" element={<Editor/>} />
-              <Route path="/calendar" element={<Calendar/>} />
-              <Route path="/colour-picker" element={<ColourPicker/>} />
+              <Route path="/kanban" element={<Kanban />} />
+              <Route path="/editor" element={<Editor />} />
+              <Route path="/calendar" element={<Calendar />} />
+              <Route path="/colour-picker" element={<ColourPicker />} />
 
               {/* Charts */}
-              <Route path="/line" element={<LineChart/>} />
-              <Route path="/area" element={<AreaChart/>} />
-              <Route path="/bar" element={<BarChart/>} />
-              <Route path="/pie" element={<PieChart/>} />
-              <Route path="/financial" element={<FinancialChart/>} />
-              <Route path="/colour-mapping" element={<ColourMappingChart/>} />
-              <Route path="/pyramid" element={<PyramidChart/>} />
-              <Route path="/stacked" element={<StackedChart/>} />
+              <Route path="/line" element={<LineChart />} />
+              <Route path="/area" element={<AreaChart />} />
+              <Route path="/bar" element={<BarChart />} />
+              <Route path="/pie" element={<PieChart />} />
+              <Route path="/financial" element={<FinancialChart />} />
+              <Route path="/colour-mapping" element={<ColourMappingChart />} />
+              <Route path="/pyramid" element={<PyramidChart />} />
+              <Route path="/stacked" element={<StackedChart />} />
             </Routes>
           </div>
         </div>
