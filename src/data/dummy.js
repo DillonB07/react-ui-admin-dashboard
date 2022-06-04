@@ -553,7 +553,7 @@ export const links = [
         icon: <FiEdit />,
       },
       {
-        name: "color-picker",
+        name: "colour-picker",
         icon: <BiColorFill />,
       },
     ],
